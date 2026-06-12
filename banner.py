@@ -1,5 +1,6 @@
 import socket
 import sys
+import requests
 
 if len(sys.argv) < 3: # Verificar se o número de argumentos é menor que 3 (script.py, IP/Domínio, Porta)
 	print('Uso: python script.py <IP/Domínio> <Porta>')
@@ -24,21 +25,14 @@ for port in ports_lists:
 		code = sock.connect_ex((ip, port)) # Tentar conectar na porta e obter o código de resposta
 
 		if code == 0:
-
-			if port == 443:
-				try:
-					requisicao_https = requests.head(f"https://{ip}/", timeout=3) # Tentar na porta 443
-					print (f"[+] {port} - HTTPS HEAD status: {requisicao_https.status_code}.")
-				except requests.RequestException as e:
-					print (f"{port} - Erro na requisição HTTPS.")
-			elif port == 80:
-				try:
-					# Tentar na porta 80
-					requisicao = requests.head(f"http://{ip}/", timeout=3)
-					print (f"[+] {port} - HTTP HEAD status: {requisicao.status_code}")
-				except requests.RequestException as e:
-					print (f"{port} - Erro na requisição HTTP: {e}")
+			
+			try:
+				requisicao_https = requests.head(f"https://{ip}/", timeout=3) # Tentar na porta 443
+				print (f"[+] {port} - HTTPS HEAD status: {requisicao_https.status_code}.") # Imprimir o status da requisição HTTPS
+			except requests.RequestException as e:
+				print (f"{port} - Erro na requisição HTTPS.")
 		sock.close()
+		
 	except Exception as e:
 		print (f"[!] Erro ao conectar na porta {port}: {e}")
 
