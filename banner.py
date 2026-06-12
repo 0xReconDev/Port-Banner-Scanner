@@ -1,6 +1,5 @@
 import socket
 import sys
-import requests
 
 ip = sys.argv[1]
 ports = [21, 22, 80, 443]
@@ -26,12 +25,6 @@ for port in ports:
 					print (f"[+] {port} - HTTP HEAD status: {requisicao.status_code}")
 				except requests.RequestException as e:
 					print (f"{port} - Erro na requisição HTTP: {e}")
-			else: # Outras portas
-				try:
-					banner = sock.recv(1024).decode().replace("\n", "")
-					print (f"[+] {port} - {banner}")
-				except:
-					print (f"{port} - Não foi possível indentificar o banner.")
 		sock.close()
 	except Exception as e:
 		print (f"Erro ao conectar na porta {port}: {e}")
