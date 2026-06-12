@@ -1,6 +1,6 @@
 # 🛡️ Port Banner Scanner
 
-O script em questão, tenta verificar se uma lista de portas passada pelo usuário via argumentos está abertas. E retorna as informações necessárias sobre a porta.
+O script em questão e uma versão aprimorada da minha primeira versão de port scan, agora ele verifica se uma lista de portas passada pelo usuário via argumentos está abertas. E retorna as informações necessárias sobre a porta. Possue melhores tratamentos de erros e mais segurança na execução.
 
 ## 🔍 O que ele faz:
 
