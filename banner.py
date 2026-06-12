@@ -1,7 +1,5 @@
 import socket
 import sys
-import requests
-
 
 if len(sys.argv) < 3: # Verificar se o número de argumentos é menor que 3 (script.py, IP/Domínio, Porta)
 	print('Uso: python script.py <IP/Domínio> <Porta>')
