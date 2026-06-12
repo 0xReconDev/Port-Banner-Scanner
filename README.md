@@ -1,11 +1,9 @@
 # 🛡️ Port Banner Scanner
 
-Este é um script simples em Python que escaneia algumas portas específicas de um host, tenta identificar banners de serviços e faz requisições HTTP/HTTPS (HEAD) quando aplicável.
+Este é um script simples em Python que escaneia algumas portas específicas de um host.
 
 ## 🔍 O que ele faz:
-
-- Verifica se as portas 21 (FTP), 22 (SSH), 80 (HTTP) e 443 (HTTPS) estão abertas.
-- Tenta identificar o **banner** de serviços que enviam mensagens ao se conectar.
+- Verifica se as portas 21 (FTP), 22 (SSH), 80 (HTTP) e 443 (HTTPS) estão abertas, pode ser modificada no arquivo.
 - Para portas 80 e 443, faz uma requisição **HEAD** para capturar o status HTTP.
 - Essas ports podem ser alteradas na array dentro do script.
   
@@ -13,6 +11,7 @@ Este é um script simples em Python que escaneia algumas portas específicas de 
 
 - Python 3.x
 - Biblioteca `requests` (instale com `pip install requests`)
+- Recomenda-se usar ambiente linux, mas funciona no windows mas configurações prévias seram feitas.
 
 ## 🛠️ Como usar
 
