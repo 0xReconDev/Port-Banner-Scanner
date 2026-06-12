@@ -12,6 +12,7 @@ O script em questão, tenta verificar se uma lista de portas passada pelo usuár
 ## 📦 Requisitos
 
 - Python 3.x
+- Biblioteca requests (instale com pip install requests)
 - Recomenda-se ambiente linux, mas windows também funciona.
 
 ## 🛠️ Como usar
