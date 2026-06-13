@@ -1,6 +1,6 @@
 # 🛡️ Port Banner Scanner Aprimoramento 1.2
 
-O script em questão e uma versão aprimorada da minha primeira versão de port scan, agora ele verifica se uma lista de portas passada pelo usuário via argumentos está abertas. E retorna as informações necessárias sobre a porta. Possue melhores tratamentos de erros e mais segurança na execução.
+O script em questão e uma versão aprimorada da minha primeira versão de port scan, agora ele verifica se uma lista de portas passada pelo usuário via argumentos está abertas. Faz uma conexão TCP na porta e retorna 0 para aberto e 11 para fechado, caso seja passado uma lista de portas, o socket ira abrir e fechar o socket caso ele não seja mais necessário evitando tráfego desnecessáio. Possue melhores tratamentos de erros e mais segurança na execução.
 
 ## 🔍 Novas Funcionalidade:
 
