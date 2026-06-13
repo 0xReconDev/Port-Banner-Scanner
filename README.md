@@ -26,9 +26,3 @@ python3 banner.py exemplo.com 80 443
 [+] 443 - HTTPS HEAD status: 200.
 
 - Agora ele aceita mais de uma porta, mas não quer dizer que todas estão abertas, aliás isso depende do host.
-
-## ⚠️ Aviso
-
-- Este script foi feito para fins educacionais e de testes autorizados.
-- Não utilize em redes ou sistemas sem permissão.
-- Você é o único responsável pelo uso deste código.
